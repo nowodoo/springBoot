@@ -20,7 +20,7 @@ public class Demo {
 	 */
     @JSONField(serialize=false)
 	private String remarks;//备注信息.
-	
+
 	
 	public String getRemarks() {
 		return remarks;
