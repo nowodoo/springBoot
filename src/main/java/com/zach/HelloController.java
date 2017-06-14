@@ -19,8 +19,13 @@ public class HelloController {
 	 */
 	@RequestMapping("/hello")
 	public String hello(){
-		return "hello";
+		return "hello1";
 	}
+
+    @RequestMapping("/hello4")
+    public String hello4(){
+        return "hello4";
+    }
 
     /**
      * 测试返回json

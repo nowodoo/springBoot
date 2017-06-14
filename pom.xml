@@ -45,32 +45,50 @@
             <artifactId>fastjson</artifactId>
             <version>1.2.15</version>
         </dependency>
+
+        <!--devtools-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+            <scope>true</scope>
+        </dependency>
+
     </dependencies>
 
     <!-- 构建节点. -->
     <build>
         <plugins>
             <!-- 在这里添加springloader plugin-->
+            <!--<plugin>-->
+                  <!--<groupId>org.springframework.boot</groupId>-->
+                  <!--<artifactId>spring-boot-maven-plugin </artifactId>-->
+                  <!--<dependencies>-->
+                   <!--<dependency>-->
+                       <!--<groupId>org.springframework</groupId>-->
+                       <!--<artifactId>springloaded</artifactId>-->
+                       <!--<version>1.2.4.RELEASE</version>-->
+                   <!--</dependency>-->
+                <!--</dependencies>-->
+                <!--<executions>-->
+                   <!--<execution>-->
+                       <!--<goals>-->
+                           <!--<goal>repackage</goal>-->
+                       <!--</goals>-->
+                       <!--<configuration>-->
+                           <!--<classifier>exec</classifier>-->
+                       <!--</configuration>-->
+                   <!--</execution>-->
+                   <!--</executions>-->
+            <!--</plugin>-->
+            <!--需要说明一下，这里和上面时两者选其一的-->
             <plugin>
-                  <groupId>org.springframework.boot</groupId>
-                  <artifactId>spring-boot-maven-plugin </artifactId>
-                  <dependencies>
-                   <dependency>
-                       <groupId>org.springframework</groupId>
-                       <artifactId>springloaded</artifactId>
-                       <version>1.2.4.RELEASE</version>
-                   </dependency>
-                </dependencies>
-                <executions>
-                   <execution>
-                       <goals>
-                           <goal>repackage</goal>
-                       </goals>
-                       <configuration>
-                           <classifier>exec</classifier>
-                       </configuration>
-                   </execution>
-                   </executions>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <!--fork :  如果没有该项配置，肯呢个devtools不会起作用，即应用不会restart -->
+                    <fork>true</fork>
+                </configuration>
             </plugin>
         </plugins>
     </build>
