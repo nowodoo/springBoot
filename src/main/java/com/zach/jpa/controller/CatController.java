@@ -25,13 +25,18 @@ public class CatController {
 	
 	@RequestMapping("/delete")
 	public String delete(){
-		catService.delete(1);
-		return "delete ok";
-	}
-	
-	@RequestMapping("/getAll")
+        catService.delete(1);
+        return "delete ok";
+    }
+
+    @RequestMapping("/getAll")
 	public Iterable<Cat> getAll(){
 		return catService.getAll();
 	}
-	
+
+    @RequestMapping("/findByCatName")
+	public Cat findByCatName(String catName) {
+        return catService.findByCatName(catName);
+    }
+
 }
