@@ -27,7 +27,7 @@ public class GlobalDefaultExceptionHandler {
 	
 	@ExceptionHandler(Exception.class)
 	@ResponseBody  //这个注解表示返回的是json
-	public String defaultExceptionHandler(HttpServletRequest req,Exception e){
+	public String defaultExceptionHandler(HttpServletRequest req, Exception e){
 		//是返回的String.
 		
 		//ModelAndView -- 介绍 模板引擎...?
