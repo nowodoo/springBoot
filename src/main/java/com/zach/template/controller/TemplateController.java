@@ -10,14 +10,25 @@ import java.util.Map;
 public class TemplateController {
 
     /**
-	 * 返回html模板.
-	 */
-	@RequestMapping("/templates")
-	public String helloHtml(Map<String,Object> map){
-		map.put("hello","from TemplateController.helloHtml");
+     * 返回html模板.
+     */
+    @RequestMapping("/templates")
+    public String helloHtml(Map<String,Object> map){
+        map.put("hello","from TemplateController.helloHtml");
 
         //在这里的返回值就是页面的名称。
-		return "hello";
-	}
+        return "hello";
+    }
+
+    /**
+     * 返回html模板.
+     */
+    @RequestMapping("/templates/freemarker")
+    public String helloFreemarker(Map<String,Object> map){
+        map.put("hello","from TemplateController.helloFreemarker");
+
+        //在这里的返回值就是页面的名称。
+        return "helloFreemarker";
+    }
 	
 }
