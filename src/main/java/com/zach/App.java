@@ -3,6 +3,7 @@ package com.zach;
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
+import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
@@ -17,6 +18,7 @@ import java.util.List;
  */
 //extends WebMvcConfigurerAdapter  http://blog.csdn.net/cloume/article/details/48439429
 @SpringBootApplication
+@MapperScan("com.zach.*.mapper")
 public class App {
 
 //    /**
