@@ -1,6 +1,7 @@
 package com.zach.mybatis.mapper;
 
 import com.zach.mybatis.domain.Demo;
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
@@ -15,4 +16,7 @@ public interface DemoMappper {
 
     @Select("select name from Demo where id = #{id}")
     public String getNameById(long id);
+
+    @Insert("insert into demo(id, name) values(#{id},#{name})")
+    public int insert(Demo demo);
 }
